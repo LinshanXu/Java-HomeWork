@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Welcome to the Currency Converter</title>
+    </h:head>
+    <h:body>
+        <h1>Welcome to the Currency Converter</h1>
+
+        <h3>Input Messages</h3>
+        <h:form>
+        <p>
+            <h:outputLabel for="searchedAcct" value="Input Amount: "/>
+            <h:inputText id="inputAmount" value="#{conMan.inputAmount}"/>
+        </p>
+        <p>
+            <h:outputLabel for="searchedAcct" value="From Currency: "/>
+            <h:inputText id="From" value="#{conMan.fromCurrency}"/>
+            <h:outputLabel for="searchedAcct" value="To Currency: "/>
+            <h:inputText id="To" value="#{conMan.toCurrency}"/>
+        </p>
+        <p>
+            <h:commandButton value="Convert" action="#{conMan.convert}"/>
+        </p>
+        <p>
+            <h:outputLabel for="transactionAmount" value="Convert Results:"/>
+            <h:outputLabel for="transactionAmount" value="Input Amount:"/>
+            <h:outputText id="convertAmount" value="#{conMan.inputAmount}"/>
+            <h:outputLabel for="transactionAmount" value="Output Amount:"/>
+            <h:outputText id="convertResult" value="#{conMan.outputAmount}"/>
+        </p>
+        <hr/>
+        </h:form>
+
+
+    </h:body>
+</html>
+
